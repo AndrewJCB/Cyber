@@ -1,4 +1,4 @@
-# How to set up a VM for HackTheBox, troubleshooting common errors and automation of solutions.
+# How to set up a VM for HackTheBox, troubleshooting common errors and automation of solutions to common errors.
 
 ## Setting up using Parrot OS
 ### Step 1: Selecting virtualisation tool
