@@ -3,8 +3,13 @@
 ## Setting up using Parrot OS
 ### Step 1: Selecting virtualisation tool
 
-
+#### QEMU
+#### VirtualBox
+#### VMWare
 
 ## Setting up using Kali Linux
 ### Step 1: Selecting virtualisation tool
 
+#### QEMU
+#### VirtualBox
+#### VMWare
