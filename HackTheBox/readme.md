@@ -3,7 +3,7 @@
 ## Setting up using Parrot OS
 
 ### Step 0: Downloading VM image or iso file
-'https://www.parrotsec.org/download/'
+https://www.parrotsec.org/download/
 ### Step 1: Selecting virtualisation tool
 
 #### QEMU
