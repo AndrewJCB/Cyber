@@ -1,6 +1,9 @@
 # How to set up a VM for HackTheBox, troubleshooting common errors and automation of solutions to common errors.
 
 ## Setting up using Parrot OS
+
+### Step 0: Downloading VM image or iso file
+'https://www.parrotsec.org/download/'
 ### Step 1: Selecting virtualisation tool
 
 #### QEMU
