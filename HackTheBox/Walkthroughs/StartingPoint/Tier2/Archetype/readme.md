@@ -4,4 +4,4 @@
 - nmap
 - smbclient
 - impacket
-   -mssqlclient.py
+   - mssqlclient.py
