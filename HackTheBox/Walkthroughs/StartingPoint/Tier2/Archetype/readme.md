@@ -266,9 +266,17 @@ We can see both `User ID=ARCHETYPE\sql_svc` and `Password=M3g4c0rp123`
 
 Let's submit the password M3g4c0rp123 to HackTheBox!
 
-### Task 4
+### Task 4: What script from Impacket collection can be used in order to establish an authenticated connection to a Microsoft SQL Server? 
 
-- [ ]
+- [X] **Check Impacket documentation to look for references to connecting to a Microsoft SQL Server**
+
+If we open the impacket github repo available [here](https://github.com/SecureAuthCorp/impacket), we see that there is an mssqlclient.py file in the examples folder.
+
+- [ ] **Clone and install impacket from the github repo**
+
+
+
+- [ ] Submit the name of the collection used  
 
 ### Task 5
 
