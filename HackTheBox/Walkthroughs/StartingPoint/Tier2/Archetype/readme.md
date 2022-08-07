@@ -26,7 +26,7 @@ Rather than having to reopen the browser window or traversing through old termin
 
 ### Task 1: Which TCP port is hosting a database server? 
 
-- [x] Perform an nmap scan
+- [x] **Perform an nmap scan**
 
 Since we're doing a bit more than just checking to see how many ports are open, it is worth using two flags (-sC and -sV) on the NMAP scan in an open terminal window:
 
@@ -41,7 +41,7 @@ The flags of nmap are used for the following reasons:
    The -sC flag is useful later on during privelege escalation.
    ```
 
-- [X] Check to see which ports are open
+- [X] **Check to see which ports are open**
 
 The summary from Nmap should look something like:
 
@@ -101,11 +101,11 @@ Nmap done: 1 IP address (1 host up) scanned in 56.82 seconds
 ```
 
 
-- [X] Store the port containing a name with SQL or DB in it
+- [X] **Store the port containing a name with SQL or DB in it**
 
 Notice that **TCP Port 1433** contains an SQL server on it, specifically Microsoft SQL Server 2017 14.00.1000.00; RTM.
 
-- [X] Submit the port number on the browser window
+- [X] **Submit the port number on the browser window**
 
 We can now submit the port number to the HackTheBox interface.
 
