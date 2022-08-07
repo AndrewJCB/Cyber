@@ -46,45 +46,58 @@ The flags of nmap are used for the following reasons:
 The summary from Nmap should look something like:
 
 ```
-Nmap scan report for <target_ip>
-Host is up (0.28s latency).
-Not shown: 971 closed tcp ports (conn-refused)
-PORT      STATE    SERVICE         VERSION
-7/tcp     filtered echo
-135/tcp   open     tcpwrapped
-139/tcp   open     tcpwrapped
-416/tcp   filtered silverplatter
-445/tcp   open     tcpwrapped
-1051/tcp  filtered optima-vnet
-1088/tcp  filtered cplscrambler-al
-1198/tcp  filtered cajo-discovery
-1433/tcp  open     tcpwrapped
-1947/tcp  filtered sentinelsrm
-2001/tcp  filtered dc
-2005/tcp  filtered deslogin
-3914/tcp  filtered listcrt-port-2
-4002/tcp  filtered mlchat-proxy
-4129/tcp  filtered nuauth
-4550/tcp  filtered gds-adppiw-db
-5904/tcp  filtered unknown
-6001/tcp  filtered X11:1
-7443/tcp  filtered oracleas-https
-7921/tcp  filtered unknown
-8200/tcp  filtered trivnet1
-8443/tcp  filtered https-alt
-9040/tcp  filtered tor-trans
-9207/tcp  filtered wap-vcal-s
-9290/tcp  filtered unknown
-16993/tcp filtered amt-soap-https
-49156/tcp filtered unknown
-61532/tcp filtered unknown
-63331/tcp filtered unknown
+Nmap scan report for <target_IP>
+Host is up (0.26s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE SERVICE      VERSION
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds Windows Server 2019 Standard 17763 microsoft-ds
+1433/tcp open  ms-sql-s     Microsoft SQL Server 2017 14.00.1000.00; RTM
+| ms-sql-ntlm-info: 
+|   Target_Name: ARCHETYPE
+|   NetBIOS_Domain_Name: ARCHETYPE
+|   NetBIOS_Computer_Name: ARCHETYPE
+|   DNS_Domain_Name: Archetype
+|   DNS_Computer_Name: Archetype
+|_  Product_Version: 10.0.17763
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2022-08-07T06:04:27
+|_Not valid after:  2052-08-07T06:04:27
+|_ssl-date: 2022-08-07T06:08:58+00:00; +1s from scanner time.
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
 
 Host script results:
-|_smb2-time: Protocol negotiation failed (SMB2)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2022-08-07T06:08:46
+|_  start_date: N/A
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Standard 17763 (Windows Server 2019 Standard 6.3)
+|   Computer name: Archetype
+|   NetBIOS computer name: ARCHETYPE\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2022-08-06T23:08:43-07:00
+| ms-sql-info: 
+|   10.129.51.144:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 2017 RTM
+|       number: 14.00.1000.00
+|       Product: Microsoft SQL Server 2017
+|       Service pack level: RTM
+|       Post-SP patches applied: false
+|_    TCP port: 1433
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 1h24m01s, deviation: 3h07m50s, median: 0s
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 177.12 seconds
+Nmap done: 1 IP address (1 host up) scanned in 56.82 seconds
 ```
 
 - [ ] Store the port containing a name with SQL or DB in it
