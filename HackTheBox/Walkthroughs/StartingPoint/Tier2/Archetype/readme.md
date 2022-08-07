@@ -24,7 +24,24 @@ So that each time we need to access the target IP we can just open a new termina
    
    ```cat target_ip.txt```
    
-Rather than having to reopen the browser window or traversing through old terminal commands. I also usually create a working directory for the specific box or task. Note - if we need to close the box for any reason and reopen it later - ensure that the first time we're starting the box again we copy the IP and store it in the `target_ip.txt` file.
+Rather than having to reopen the browser window or traversing through old terminal commands. It is ideal to create a separate working directory for the specific box or task to avoid any confusion for example if you have created a starting_point directory and this is the first box of **Tier 2**, make a new directory for boxes at this level:
+
+```
+   mkdir tier2
+   cd tier2
+   
+   mkdir archetype
+   cd archetype
+   pwd
+```
+
+So the present working directory obtained using `pwd` above should give: 
+
+``` 
+   /home/<your_username>/starting_point/tier2/archetype/
+```
+
+Note - if we need to close the box for any reason and reopen it later - ensure that the first time we're starting the box again we copy the IP and store it in the `target_ip.txt` file in the appropriate file directory.
 
 ### Task 1: Which TCP port is hosting a database server? 
 
