@@ -18,7 +18,7 @@ or you're in an open pwnbox window - connect to the machine and copy the target 
 
    ```nano target_ip.txt```
 
-So that each time I need to access the target IP I can just open a new terminal window and use
+So that each time we need to access the target IP I can just open a new terminal window and use
    
    ```cat target_ip.txt```
    
@@ -31,6 +31,13 @@ Rather than having to reopen the browser window or traversing through old termin
 Since we're doing a bit more than just checking to see how many ports are open, it is worth using two flags (-sC and -sV) on the NMAP scan in an open terminal window:
 
    ```nmap -sC -sV <target_IP_address>```
+
+The flags of nmap are used for the following reasons:
+
+   ``` 
+   -sV: Used to check the version of each service offered by the open ports.
+   -sC: Enable scripts from NSE, the **N**map **S**cripting **E**ngine. This is useful later on during privelege escalation.
+   ```
 
 - [ ] Check to see which ports are open
 
