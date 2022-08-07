@@ -3,10 +3,10 @@
 ## Recommended OS - ParrotOS or Pwnbox
 
 ## Tools Used
-- nmap
-- smbclient
-- impacket
-   - mssqlclient.py
+- `nmap`
+- `smbclient`
+- `impacket`
+   - `mssqlclient.py`
 
 
 ## Start
@@ -18,11 +18,11 @@ or you're in an open pwnbox window - connect to the machine and copy the target 
 
    ```nano target_ip.txt```
 
-So that each time we need to access the target IP I can just open a new terminal window and use
+So that each time we need to access the target IP we can just open a new terminal window and use
    
    ```cat target_ip.txt```
    
-Rather than having to reopen the browser window or traversing through old terminal commands. I also usually create a working directory for the specific box or task. Note - if we need to close the box for any reason and reopen it later - ensure that the first time we're starting the box again we copy the IP and store it in the **target_ip.txt** file.
+Rather than having to reopen the browser window or traversing through old terminal commands. I also usually create a working directory for the specific box or task. Note - if we need to close the box for any reason and reopen it later - ensure that the first time we're starting the box again we copy the IP and store it in the `target_ip.txt` file.
 
 ### Task 1: Which TCP port is hosting a database server? 
 
@@ -113,7 +113,7 @@ We can now submit the port number to the HackTheBox interface.
 
 - [ ] **Enumerate over SMB ports**
 
-Since we discovered in _Task 1_ that there are open SMB ports and that port 1433 contains an SQL server, we can enumerate using the `smbclient` tool with flags -N and -L:
+Since we discovered in _Task 1_ that there are open SMB ports and that port 1433 contains an SQL server, we can enumerate using the `smbclient` tool with flags `-N` and `-L`:
 
 ```
 smbclient -N -L \\\\<target_IP>\\
