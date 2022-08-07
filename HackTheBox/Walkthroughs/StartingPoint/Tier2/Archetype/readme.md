@@ -18,7 +18,7 @@ Making sure that you are connected to the HackTheBox vpn using:
 
 or you're in an open pwnbox window - connect to the machine and copy the target machine IP address. 
 
-Rather than having to reopen the browser window or traversing through old terminal commands. It is ideal to create a separate working directory for the specific box or task to avoid any confusion for example if you have created a starting_point directory and this is the first box of **Tier 2**, make a new directory for boxes at this level:
+Rather than having to reopen the browser window or traversing through old terminal commands. It is ideal to create a separate working directory for the specific box or task to avoid any confusion for example if you have created a `starting_point` directory and this is the first box of **Tier 2**, make a new directory for boxes at this level:
 
 ```
 mkdir tier2
@@ -32,7 +32,7 @@ pwd
 So the present working directory obtained using `pwd` above should give: 
 
 ``` 
-/home/<your_username>/starting_point/tier2/archetype/
+/home/<your_username>/HTB/starting_point/tier2/archetype/
 ```
 
 It is good practice to store the target IP in a text file using:
