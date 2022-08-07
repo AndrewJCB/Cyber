@@ -168,11 +168,15 @@ SMB1 disabled -- no workgroup available
 
 Where we can see that there are 3 priveleged Sharename addresses: `ADMIN$`, `C$` and `IPC$`, whilst there's only one non-administrator share.
 
-- [X] **List the Non-administrator Sharename**
+- [X] **List the non-administrator sharename(s)**
 
-From above we can see that the non-admin sharename is `backups`, so the answer for task two is **backups**.
+From above we can see that the non-admin sharename is `backups`. 
 
-### Task 3
+- [X] **Submit the non-administrator share to HackTheBox**
+
+The answer for task two is **backups** since there is only one non-admin share present after enumeration.
+
+### Task 3:  What is the password identified in the file on the SMB share? 
 
 - [ ]
 
