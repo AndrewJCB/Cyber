@@ -13,6 +13,7 @@
 Making sure that you are connected to the HackTheBox vpn using:
 
    ```sudo openvpn starting_point_<username>.ovpn```
+
 or you're in an open pwnbox window - connect to the machine and copy the target machine IP address. I like to store the target IP in a text file using:
 
    ```nano target_ip.txt```
