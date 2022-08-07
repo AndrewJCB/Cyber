@@ -109,9 +109,9 @@ Notice that **TCP Port 1433** contains an SQL server on it, specifically Microso
 
 We can now submit the port number to the HackTheBox interface.
 
-### Task 2
+### Task 2: What is the name of the non-Administrative share available over SMB?
 
-- [ ]
+- [ ] 
 
 ### Task 3
 
