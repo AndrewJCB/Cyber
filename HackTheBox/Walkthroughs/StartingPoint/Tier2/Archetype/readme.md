@@ -26,7 +26,7 @@ Rather than having to reopen the browser window or traversing through old termin
 
 ### Task 1
 
-- [ ]
+- [ ] Which TCP port is hosting a database server? 
 
 ### Task 2
 
