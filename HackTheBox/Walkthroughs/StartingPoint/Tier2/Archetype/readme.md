@@ -36,7 +36,7 @@ cd HTB/starting_point
 sudo openvpn starting_point_<username>.ovpn
 ```
 
-Rather than having to reopen the browser window or traversing through old terminal commands. It is ideal to create a separate working directory for the specific box or task to avoid any confusion for example if you have created a `starting_point` directory and this is the first box of **Tier 2**, make a new directory for boxes at this level:
+Rather than having to reopen the browser window or traversing through old terminal commands, it is ideal to create a separate working directory for the specific box or task to avoid any confusion for example if you have created a `starting_point` directory and this is the first box of **Tier 2**, make a new directory for boxes at this level:
 
 ```
 mkdir tier2
