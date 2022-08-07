@@ -3,6 +3,8 @@
 ## Recommended OS - ParrotOS or Pwnbox
 
 ## Tools Used
+- `openvpn`
+- `nano`
 - `nmap`
 - `smbclient`
 - `impacket`
