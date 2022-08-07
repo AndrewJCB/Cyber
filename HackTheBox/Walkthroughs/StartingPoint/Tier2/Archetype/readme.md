@@ -81,8 +81,8 @@ nmap -sC -sV <target_IP_address>
 
 The flags of nmap are used for the following reasons:
  
--`-sV`: Used to check the version of each service offered by the open ports.
--`sC`: Enable scripts from NSE, the Nmap Scripting Engine. 
+- `-sV`: Used to check the version of each service offered by the open ports.
+- `-sC`: Enable scripts from NSE, the Nmap Scripting Engine. 
 
 
 NB: The `-sC` flag is useful later on during privelege escalation.
