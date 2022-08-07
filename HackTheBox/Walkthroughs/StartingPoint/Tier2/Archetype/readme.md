@@ -1,6 +1,6 @@
 # Archetype Walkthrough
 
-## Recommended OS - ParrotOS or Pwnbox
+## Recommended OS - ParrotOS, Kali Linux or Pwnbox
 
 ## Tools Used
 - `openvpn`
