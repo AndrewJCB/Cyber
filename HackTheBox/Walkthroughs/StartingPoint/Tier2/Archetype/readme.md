@@ -22,18 +22,32 @@ So that each time I need to access the target IP I can just open a new terminal 
    
    ```cat target_ip.txt```
    
-Rather than having to reopen the browser window or traversing through old terminal commands.
+Rather than having to reopen the browser window or traversing through old terminal commands. I also usually create a working directory for the specific box or task
 
 ### Task 1
 
+- [ ]
+
 ### Task 2
+
+- [ ]
 
 ### Task 3
 
+- [ ]
+
 ### Task 4
+
+- [ ]
 
 ### Task 5
 
+- [ ]
+
 ### Task 6
 
+- [ ]
+
 ### Task 7
+
+- [ ]
