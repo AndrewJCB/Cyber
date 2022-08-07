@@ -56,7 +56,7 @@ Note - if we need to close the box for any reason and reopen it later - ensure t
 Since we're doing a bit more than just checking to see how many ports are open, it is worth using two flags (-sC and -sV) on the NMAP scan in an open terminal window:
 
 ```
-   nmap -sC -sV <target_IP_address>
+nmap -sC -sV <target_IP_address>
 ```
 
 The flags of nmap are used for the following reasons:
