@@ -11,12 +11,30 @@
    - `mssqlclient.py`
 
 
-## Start
-Making sure that you are connected to the HackTheBox vpn using:
+## Start: Setting up the host VM or using Pwnbox for the currnet box
 
-   ```sudo openvpn starting_point_<username>.ovpn```
+If you're in an open Pwnbox window - connect to the machine and copy the target machine IP address. 
 
-or you're in an open pwnbox window - connect to the machine and copy the target machine IP address. 
+Regardless of whether we use Pwnbox or, it is easy to create (or traverse into) a `starting_point` directory, and it also makes sense to move the `starting_point_<username>.ovpn` file from the downloads folder to keep directories clean: 
+
+If the `starting_point` directory doesn't exist:
+
+```
+mkdir starting_point
+```
+Then move the `.ovpn` file using:
+
+```
+cd Downloads
+mv starting_point_<username>.ovpn /home/<homeuser>/HTB/starting_point/starting_point_<username>.ovpn
+```
+Then traverse into the `starting_point` directory and start the vpn:
+
+```
+cd 
+cd HTB/starting_point
+sudo openvpn starting_point_<username>.ovpn
+```
 
 Rather than having to reopen the browser window or traversing through old terminal commands. It is ideal to create a separate working directory for the specific box or task to avoid any confusion for example if you have created a `starting_point` directory and this is the first box of **Tier 2**, make a new directory for boxes at this level:
 
