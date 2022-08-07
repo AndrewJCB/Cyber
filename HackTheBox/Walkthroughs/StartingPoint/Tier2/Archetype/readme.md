@@ -41,7 +41,7 @@ The flags of nmap are used for the following reasons:
    The -sC flag is useful later on during privelege escalation.
    ```
 
-- [ ] Check to see which ports are open
+- [X] Check to see which ports are open
 
 The summary from Nmap should look something like:
 
