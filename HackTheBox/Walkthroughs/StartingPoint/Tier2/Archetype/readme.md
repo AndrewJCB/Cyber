@@ -152,9 +152,24 @@ Where
 - `-N` is the "no password" flag (meaning no password is parsed when accessing the SMB server)
 - `-L` is the flag that displays the services available on the server (even if they aren't immediately accessible)
 
+- [X] **List all Sharenames**
+The `smbclient` terminal command used above produces the following output
 
-- [ ] **List all Sharenames**
-- [ ] **List the Non-administrator Sharename**
+```
+	Sharename       Type      Comment
+	---------       ----      -------
+	ADMIN$          Disk      Remote Admin
+	backups         Disk      
+	C$              Disk      Default share
+	IPC$            IPC       Remote IPC
+SMB1 disabled -- no workgroup available
+```
+
+Where we can see that there are 3 priveleged Sharename addresses: `ADMIN$`, `C$` and `IPC$`, whilst there's only one non-administrator share.
+
+- [X] **List the Non-administrator Sharename**
+
+From above we can see that the non-admin sharename is `backups`, so the answer for task two is **backups**.
 
 ### Task 3
 
