@@ -139,7 +139,7 @@ We can now submit the port number to the HackTheBox interface.
 
 ### Task 2: What is the name of the non-Administrative share available over SMB?
 
-- [ ] **Enumerate over SMB ports**
+- [X] **Enumerate over SMB ports**
 
 Since we discovered in _Task 1_ that there are open SMB ports and that port 1433 contains an SQL server, we can enumerate using the `smbclient` tool with flags `-N` and `-L`:
 
@@ -153,6 +153,7 @@ Where
 - `-L` is the flag that displays the services available on the server (even if they aren't immediately accessible)
 
 - [X] **List all Sharenames**
+
 The `smbclient` terminal command used above produces the following output
 
 ```
