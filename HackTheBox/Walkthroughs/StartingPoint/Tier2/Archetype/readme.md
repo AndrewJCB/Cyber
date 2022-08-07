@@ -195,7 +195,11 @@ The answer for task two is **backups** since there is only one non-admin share p
 
 ### Task 3:  What is the password identified in the file on the SMB share? 
 
-- [ ]
+- [ ] **Check the backups share for files to use for privelege escalation**
+
+- [ ] **Download the file(s) necessary for privelege escalation**
+
+- [ ] **Submit the password from the file**
 
 ### Task 4
 
