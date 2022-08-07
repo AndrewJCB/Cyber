@@ -21,30 +21,30 @@ or you're in an open pwnbox window - connect to the machine and copy the target 
 Rather than having to reopen the browser window or traversing through old terminal commands. It is ideal to create a separate working directory for the specific box or task to avoid any confusion for example if you have created a starting_point directory and this is the first box of **Tier 2**, make a new directory for boxes at this level:
 
 ```
-   mkdir tier2
-   cd tier2
+mkdir tier2
+cd tier2
    
-   mkdir archetype
-   cd archetype
-   pwd
+mkdir archetype
+cd archetype
+pwd
 ```
 
 So the present working directory obtained using `pwd` above should give: 
 
 ``` 
-   /home/<your_username>/starting_point/tier2/archetype/
+/home/<your_username>/starting_point/tier2/archetype/
 ```
 
 It is good practice to store the target IP in a text file using:
 
 ```
-   nano target_ip.txt
+nano target_ip.txt
 ```
 
 So that each time we need to access the target IP we can just open a new terminal window from the same working directory and use:
    
 ```
-   cat target_ip.txt
+cat target_ip.txt
 ```
 
 Note - if we need to close the box for any reason and reopen it later - ensure that the first time we're starting the box again we copy the IP and store it in the `target_ip.txt` file in the appropriate file directory.
@@ -62,11 +62,12 @@ Since we're doing a bit more than just checking to see how many ports are open, 
 The flags of nmap are used for the following reasons:
 
 ``` 
-   -sV: Used to check the version of each service offered by the open ports.
-   -sC: Enable scripts from NSE, the Nmap Scripting Engine. 
-   
-   The -sC flag is useful later on during privelege escalation.
+-sV: Used to check the version of each service offered by the open ports.
+-sC: Enable scripts from NSE, the Nmap Scripting Engine. 
 ```
+
+NB: The `-sC` flag is useful later on during privelege escalation.
+
 
 - [X] **Check to see which ports are open**
 
@@ -143,7 +144,7 @@ We can now submit the port number to the HackTheBox interface.
 Since we discovered in _Task 1_ that there are open SMB ports and that port 1433 contains an SQL server, we can enumerate using the `smbclient` tool with flags `-N` and `-L`:
 
 ```
-   smbclient -N -L \\\\<target_IP>\\
+smbclient -N -L \\\\<target_IP>\\
 ```
 
 Where 
