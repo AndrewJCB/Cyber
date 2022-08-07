@@ -100,9 +100,15 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 56.82 seconds
 ```
 
-- [ ] Store the port containing a name with SQL or DB in it
 
-- [ ] Submit the port number on the browser window
+- [X] Store the port containing a name with SQL or DB in it
+
+Notice that **TCP Port 1433** contains an SQL server on it, specifically Microsoft SQL Server 2017 14.00.1000.00; RTM.
+
+- [X] Submit the port number on the browser window
+
+We can now submit the port number to the HackTheBox interface.
+
 ### Task 2
 
 - [ ]
