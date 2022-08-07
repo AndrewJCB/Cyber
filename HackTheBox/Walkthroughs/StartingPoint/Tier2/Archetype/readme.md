@@ -122,7 +122,9 @@ smbclient -N -L \\\\<target_IP>\\
 Where 
 
 ```
--N is the no password flag
+-N is the "no password" flag 
+meaning no password is parsed when accessing the SMB server
+
 -L is the flag that displays the services available on the server 
 (even if they aren't immediately accessible)
 ```
