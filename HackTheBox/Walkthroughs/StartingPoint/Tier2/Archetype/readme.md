@@ -12,15 +12,14 @@
 ## Start
 Making sure that you are connected to the HackTheBox vpn using:
 
-   'sudo openvpn starting_point_<username>.ovpn'
-
+   ```sudo openvpn starting_point_<username>.ovpn'```
 or you're in an open pwnbox window - connect to the machine and copy the target machine IP address. I like to store the target IP in a text file using:
 
-   'nano target_ip.txt'
+   ```nano target_ip.txt```
 
 So that each time I need to access the target IP I can just open a new terminal window and use
    
-   'cat target_ip.txt'
+   ```cat target_ip.txt```
    
 Rather than having to reopen the browser window or traversing through old terminal commands.
 
