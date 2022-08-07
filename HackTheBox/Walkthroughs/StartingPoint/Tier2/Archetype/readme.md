@@ -28,7 +28,7 @@ Then move the `.ovpn` file using:
 cd Downloads
 mv starting_point_<username>.ovpn /home/<home_user>/HTB/starting_point/starting_point_<username>.ovpn
 ```
-- NB: `home_user` is the name of the user on your VM. If running Kali from root the prefix of the filepath will just be ROOT unless otherwise specified. 
+- NB: `home_user` is the name of the user on your VM. If running Kali from root the prefix of the filepath will just be `ROOT` unless otherwise specified. 
 
 The next step is to traverse into the `starting_point` directory and start the vpn:
 
