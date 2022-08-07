@@ -116,14 +116,15 @@ We can now submit the port number to the HackTheBox interface.
 Since we discovered in _Task 1_ that there are open SMB ports and that port 1433 contains an SQL server, we can enumerate using the `smbclient` tool with flags -N and -L:
 
 ```
-   smbclient -N -L \\\\<target_IP>\\
+smbclient -N -L \\\\<target_IP>\\
 ```
 
 Where 
 
 ```
-   -N is the no password flag
-   -L is the flag that displays the services available on the server (even if they aren't immediately accessible)
+-N is the no password flag
+-L is the flag that displays the services available on the server 
+(even if they aren't immediately accessible)
 ```
 
 - [ ] **List all Sharenames**
