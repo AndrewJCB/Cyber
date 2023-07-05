@@ -1,6 +1,6 @@
-This is a readme for the Google Cybersecurity Certificate that I am currently undertaking
+**This is a readme for the Google Cybersecurity Certificate that I am currently undertaking**
 
-Course structure:
+**Course structure:**
 
 - Foundations of Cybersecurity
 https://www.coursera.org/learn/foundations-of-cybersecurity?specialization=google-cybersecurity
